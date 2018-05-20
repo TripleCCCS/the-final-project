@@ -17,18 +17,27 @@ authRoutes.get("/signup", (req, res, next) => {
 });
 
 authRoutes.post("/signup", (req, res, next) => {
-  const username = req.body.username;
-  const password = req.body.password;
+  const name        = req.body.name;
+  const email       = req.body.email;
+  const password    = req.body.password;
+  const address     = req.body.address;
+  const city        = req.body.city;
+  const state       = req.body.state;
+  const zip         = req.body.zip;
+  const passwordConf =  req.body.passwordConf
+  // const credit = req.body.credit;
 
-  if (username === "" || password === "") {
-    res.render("signup", { message: `Please indicate username and password` });
+
+  if (name === "" || password === "" || email === "" || address === "" || city === "" || state === "" || zip === "") {
+    res.render("signup", { message: `Please indicate name, email a password and credit/debit details` });
+    console.log('ummmmmmm')
     return;
   }
 
-  User.findOne({ username:username }, "username", (err, user) => {
+  User.findOne({ email:email }, "email", (err, user) => {
     if (user !== null) {
       res.render("signup", { 
-        message: "Oops, Looks like that username already exists" 
+        message: "Oops, Looks like that email already has an account" 
       });
       return
     }
@@ -36,7 +45,7 @@ authRoutes.post("/signup", (req, res, next) => {
     const salt = bcrypt.genSaltSync(bcryptSalt);
     const hashPass = bcrypt.hashSync(password, salt);
       
-    User.create({username:username, password:hashPass})
+    User.create({name:name, password:hashPass, email:email, address:address, city:city, state:state, zip:zip })
     .then((theUser) => {
       res.redirect('/')
     })
@@ -56,7 +65,7 @@ authRoutes.get("/login", (req, res, next) => {
 //post login route
 authRoutes.post("/user-login", passport.authenticate("local",
 {
-  successRedirect: "/recipes",
+  successRedirect: "/",
   failureRedirect: "/",
   failureFlash: false,
   passReqToCallback: true

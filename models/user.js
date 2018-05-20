@@ -3,12 +3,29 @@ const Schema   = mongoose.Schema;
 
 const userSchema = new Schema({
   name: String,
-  email: String,
-  password: String,
+  email: 
+  {
+    type: String,
+    unique: true,
+    required: true,
+    trim: true
+  },
+  password: 
+  {
+    type: String,
+    required: true,
+  },
+  passwordConf: {
+    type: String,
+    required: true,
+  },
   googleID: String,
   address: String,
+  city: String,
+  state: String,
+  zip: String,
   cart_id: String,
-  credit: String
+  // credit: String
 
 }, {
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
