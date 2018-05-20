@@ -1,0 +1,28 @@
+<div id="home">
+    <div class="landing-text">
+
+<form action="/signup" method="POST">
+  <label>Preferred Username: </label>
+  <br>
+  <input id="username" type="text" name="username" placeholder="Enter Username Here">
+  <br><br>
+  <label>Password: </label>
+  <br>
+
+  <input id="password" type="password" name="password" placeholder="Your password">
+
+  {{#if message}}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <br><br>
+
+      <button class="btn btn-default btn-sm" value="Log In">Create</button>
+
+  <p class="account-message">
+    Already have an account?
+    <br>
+    <a href="/login">Login Instead</a>
+  </p>
+</form>
+</div>
+</div>
