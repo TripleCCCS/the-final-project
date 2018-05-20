@@ -36,6 +36,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Express View engine setup
 
@@ -51,7 +53,11 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
-
+app.use(session({
+  secret: "our-passport-local-strategy-app",
+  resave: true,
+  saveUninitialized: true
+}));
 
 // default value for title local
 app.locals.title = "Tripple C'z";
@@ -115,14 +121,13 @@ passport.use(new GoogleStrategy({
 }));
 // end passport config area
 
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 const index = require('./routes/index');
 app.use('/', index);
 
-const theFile = require('./routes/auth-routes');
-app.use('/', theFile);
+const authRoutes = require("./routes/auth-routes");
+app.use('/', authRoutes)
 
 
 
