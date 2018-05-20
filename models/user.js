@@ -5,6 +5,7 @@ const userSchema = new Schema({
   name: String,
   email: String,
   password: String,
+  googleID: String,
   address: String,
   cart_id: String,
   credit: String
