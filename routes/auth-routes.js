@@ -24,17 +24,16 @@ authRoutes.post("/signup", (req, res, next) => {
   const city        = req.body.city;
   const state       = req.body.state;
   const zip         = req.body.zip;
-  const passwordConf =  req.body.passwordConf
+  const passwordConf =  req.body.passwordConf;
   // const credit = req.body.credit;
 
 
   if (name === "" || password === "" || email === "" || address === "" || city === "" || state === "" || zip === "") {
     res.render("signup", { message: `Please indicate name, email a password and credit/debit details` });
-    console.log('ummmmmmm')
     return;
   }
 
-  User.findOne({ email:email }, "email", (err, user) => {
+  User.findOne({ email }, "email", (err, user) => {
     if (user !== null) {
       res.render("signup", { 
         message: "Oops, Looks like that email already has an account" 
@@ -44,14 +43,32 @@ authRoutes.post("/signup", (req, res, next) => {
    
     const salt = bcrypt.genSaltSync(bcryptSalt);
     const hashPass = bcrypt.hashSync(password, salt);
+
+    const newUser = new User({
+      name,
+      password: hashPass,
+      email,
+      address,
+      city,
+      state,
+      zip
+    });
+
+    newUser.save((err) => {
+      if (err) {
+        res.render("auth/signup", { message: "Something went wrong" });
+      } else {
+        res.redirect("/");
+      }
+    });
       
-    User.create({name:name, password:hashPass, email:email, address:address, city:city, state:state, zip:zip })
-    .then((theUser) => {
-      res.redirect('/')
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
+    // User.create({name:name, password:hashPass, email:email, address:address, city:city, state:state, zip:zip })
+    // .then((theUser) => {
+    //   res.redirect('/')
+    // })
+    // .catch((err)=>{
+    //   console.log(err);
+    // })
   });
 });
 
