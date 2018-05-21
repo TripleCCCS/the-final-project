@@ -7,6 +7,7 @@ const productSchema = new Schema({
   size: String,
   image1: String,
   image2: String,
+  image3: String,
   description: String,
   category: String,
   color: String,

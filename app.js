@@ -33,6 +33,12 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 
 
 // Middleware Setup
+app.use(session({
+  secret: "our-passport-local-strategy-app",
+  resave: true,
+  saveUninitialized: true
+}));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -54,11 +60,6 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
-app.use(session({
-  secret: "our-passport-local-strategy-app",
-  resave: true,
-  saveUninitialized: true
-}));
 
 // default value for title local
 app.locals.title = "Tripple C'z";
