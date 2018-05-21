@@ -15,17 +15,17 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  passwordConf: {
-    type: String,
-    required: true,
-  },
+  // passwordConf: {
+  //   type: String,
+  //   required: true,
+  // },
   googleID: String,
   address: String,
   city: String,
   state: String,
   zip: String,
-  cart_id: String,
-  // credit: String
+  cart_id: [],
+  credit: String
 
 }, {
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }

@@ -20,24 +20,22 @@ authRoutes.post("/signup", (req, res, next) => {
   const name        = req.body.name;
   const email       = req.body.email;
   const password    = req.body.password;
-  const address     = req.body.address;
+  const address     = req.body.mailingAddress;
   const city        = req.body.city;
   const state       = req.body.state;
   const zip         = req.body.zip;
-  const passwordConf =  req.body.passwordConf;
+  // const passwordConf =  req.body.passwordConf;
   // const credit = req.body.credit;
 
 
   if (name === "" || password === "" || email === "" || address === "" || city === "" || state === "" || zip === "") {
-    res.render("signup", { message: `Please indicate name, email a password and credit/debit details` });
+    res.status(400).json({ message: `Please indicate name, email a password and address details` });
     return;
   }
 
   User.findOne({ email }, "email", (err, user) => {
     if (user !== null) {
-      res.render("signup", { 
-        message: "Oops, Looks like that email already has an account" 
-      });
+      res.status(400).json({ message: 'Oops, Looks like that email already has an account' });
       return
     }
    
@@ -55,20 +53,23 @@ authRoutes.post("/signup", (req, res, next) => {
     });
 
     newUser.save((err) => {
+
       if (err) {
-        res.render("auth/signup", { message: "Something went wrong" });
+        res.status(400).json({ message: 'Something went wrong' });
       } else {
-        res.redirect("/");
+        console.log("HEYYYYYY")
+
+        req.login(newUser, (err) => {
+          if (err) {
+            res.status(500).json({ message: 'Something went wrong' });
+            return;
+          }
+          console.log("LOGGED IN THROUGH SIGNUP")
+          res.status(200).json(req.user);
+        });
       }
     });
       
-    // User.create({name:name, password:hashPass, email:email, address:address, city:city, state:state, zip:zip })
-    // .then((theUser) => {
-    //   res.redirect('/')
-    // })
-    // .catch((err)=>{
-    //   console.log(err);
-    // })
   });
 });
 
@@ -80,15 +81,35 @@ authRoutes.get("/login", (req, res, next) => {
 //end get login
 
 //post login route
-authRoutes.post("/user-login", passport.authenticate("local",
-{
-  successRedirect: "/",
-  failureRedirect: "/",
-  failureFlash: false,
-  passReqToCallback: true
-}
-));
-// end post /login
+authRoutes.post('/login', (req, res, next) => {
+  passport.authenticate('local', (err, theUser, failureDetails) => {
+    if (err) {
+      res.status(500).json({ message: 'Something went wrong' });
+      return;
+    }
+
+    if (!theUser) {
+      res.status(401).json(failureDetails);
+      return;
+    }
+
+    req.login(theUser, (err) => {
+      if (err) {
+        res.status(500).json({ message: 'Something went wrong' });
+        return;
+      }
+
+      // We are now logged in (notice req.user)
+      res.status(200).json(req.user);
+    });
+  })(req, res, next);
+});
+
+authRoutes.post("/logout", (req, res) => {
+  req.logout();
+  res.status(200).json({ message: 'Success' });
+});
+
 
 
 
