@@ -232,5 +232,136 @@ category='bralette',
 image1= 'https://images.freepeople.com/is/image/FreePeople/46062154_047_a?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
 image2= 'https://images.freepeople.com/is/image/FreePeople/46062154_047_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
 image3= 'https://images.freepeople.com/is/image/FreePeople/46062154_047_c?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain'}
+];
 
+Bodysuits = [
+  {
+    name= 'Virgo Ruffle Bodysuit',
+    size= 'XS,S,M,L',
+    description= 'If you’ve yet to add a bodysuit to your wardrobe The Virgo Ruffle Bodysuit is the one you need. Designed on a silky soft stretch satin, this romantic bodysuit features a flouncy off-shoulder ruffle, thong back and snap crotch. Simple to style and versatile, wear with any bottom for a completed look.',
+    color= 'noir, champagne',
+    material= 'satin',
+    price= '$147.98',
+    category= 'bodysuit',
+    image1 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/virgobodysuit-black.jpg?v=1520378818',
+    image2= 'https://cdn.shopify.com/s/files/1/0271/4967/products/virgo-ruffle-bs-black-2.jpg?v=1520378818',
+    image3 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/virgo-ruffle-bs-black-2.jpg?v=1520378818'
+    },
+    
+    {
+    name=  'Lucy Hook and Eye Silk Bodysuit',
+    size= 'XS,S,M,L,XL',
+    description= 'Our secret to key to easy dressing? An effortless bodysuit. The Lucy Hook and Eye Silk Bodysuit is designed with a stretch silk blend featuring underwire cups, exposed hook-and-eye details and functional shoulder ties to complete any look.',
+    color= 'soft pink',
+    material= 'silk',
+    price= '$189.00',
+    category= 'bodysuit',
+    image1 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/lucybodysuit-2.jpg?v=1525813248',
+    image2= 'https://cdn.shopify.com/s/files/1/0271/4967/products/lucybodysuit-1.jpg?v=1525813248',
+    image3 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/lucybodysuit-3.jpg?v=1525813248'
+    },
+    
+    {
+    name= 'Abigail Secretary Bodysuit',
+    size= 'XS/S M/L',
+    description= 'Add dashes of luxurious satin and feminine details in the Abigail Secretary Bodysuit. Radiating sophistication, this silky satin bodysuit is complete with plush buttons down the center and shirring, pretty pin-tuck details, sleeve cuffs buttons and a soft built-in knit panty.',
+    color= 'noir',
+    material= 'spandex',
+    price=  '$148.98',
+    category= 'bodysuit',
+    image1 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/FLL_Skivvies_Holiday17_MAUS.16657.jpg?v=1520378805',
+    image2= 'https://cdn.shopify.com/s/files/1/0271/4967/products/secretarybodysuit-black.jpg?v=1520378805',
+    image3 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/FLL_Skivvies_Holiday17_MAUS.16657.jpg?v=1520378805'
+    },
+    
+    {
+    name= 'Lena Ruffle Bodysuit',
+    size= 'XS,S,M,L',
+    description='A wardrobe staple: the Lena Ruffle Bodysuit. Designed with a silky stretch satin, this romantic bodysuit features a ruffled double shoulder strap, a plunging v-neckline and a snap gusset and thong back.',
+    color= 'midnight blue',
+    material= 'cotton, spandex, satin',
+    price= '$189.00',
+    category= 'bodysuit',
+    image1 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/FLL_Skivvies_Holiday17_MAUS.16514.jpg?v=1520378808',
+    image2= 'https://cdn.shopify.com/s/files/1/0271/4967/products/lenarufflebodysuit-navy.jpg?v=1520378808',
+    image3 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/SHOT_20_023.jpg?v=1520378808'
+    },
+    
+    {
+    name= 'Esme Long Sleeve Bodysuit',
+    size= 'XS,S,M,L',
+    description='Sexy or sophisticated? The Esme Long Sleeve Bodysuit was designed to give you the best of both worlds. Featuring a gorgeous stretch lace blend and illusion tulle paneling, this eye-catching bodysuit is complete with faux leather cups and straps to add some edge.',
+    color= 'noir',
+    material= 'mesh, nylon',
+    price= '$163.98',
+    category= 'bodysuit',
+    image1 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/Emse_Long_Sleeve_Bodysuit.jpg?v=1520385306',
+    image2= 'https://cdn.shopify.com/s/files/1/0271/4967/products/SKBOD1087-FA17_BLACK_FRONT2.jpg?v=1520385306',
+    image3 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/SKBOD1087-FA17_BLACK_FRONT1.jpg?v=1520385306'
+    },
+    
+    {
+    name= 'Miranda Embroidery Bodysuit',
+    size= 'XS,S,M,L',
+    description= 'An enchanting blend of feminine floral embroidery and a demure design, the Miranda Embroidery Bodysuit is made to whisk you into a romantic dream. Featuring subtle cutouts, a figure-framing bodice, a halter neckline and an intricate strappy back, this lovely bodysuit is irresistible with every wear.',
+    color= 'nude',
+    material= 'floral mesh',
+    price= '$167.98',
+    category= 'bodysuit',
+    image1 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/MIRANDABODYSUIT-VINTAGEROSE-1.jpg?v=1510033372',
+    image2= 'https://cdn.shopify.com/s/files/1/0271/4967/products/SHOT_11_063.jpg?v=1510033372',
+    image3 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/mirandabodysuit-vintagerose.jpg?v=1510033372'
+    },
+    
+    {
+    name= 'Amber Scallop Edge Bodysuit',
+    size= 'XS,S,M,L',
+    description= 'Embellished with delicate white floral embroidery, the Amber Scallop Edge Bodysuit was thoughtfully designed to keep its wearer feeling dreamy. The sand-tone tulle plays tastefully with transparencies while the gorgeous floral embroidery and ruffled shoulders add a swoon-worthy touch. Complete with a plunging scalloped neckline, high cut leg opening, and an invisible snap gusset',
+    color= 'lilac, blanc',
+    material= 'spandex, polyester, mesh',
+    price= '$155.98',
+    category= 'bodysuit',
+    image1 = 'Strhttps://cdn.shopify.com/s/files/1/0271/4967/products/FLL_Skivvies_Holiday17_MAUS.15849.jpg?v=1524596725ing',
+    image2= 'https://cdn.shopify.com/s/files/1/0271/4967/products/SHOT_01_012.jpg?v=1524596725',
+    image3 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/AMBERBODYSUIT-BLANC-1.jpg?v=1510033102'
+    },
+    
+    {
+    name= 'Scorpio Bodysuit',
+    size= 'XS/S M/L',
+    description= 'Classic and feminine, the Scorpio Bodysuit was made to feel like second skin. Made from a smooth stretch satin, this bodysuit works wonders with the wide fitted waistband, tiny adjustable shoulder straps, and contouring neckline. This must-have can be worn under your denims or leather pants for a night-out look all season long!',
+    color= 'noir, champagne',
+    material= 'satin',
+    price= '$140.98',
+    category= 'bodysuit',
+    image1 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/scorpio-bs-black-2.jpg?v=1520379649',
+    image2= 'https://cdn.shopify.com/s/files/1/0271/4967/products/scorpiobodysuit-champagne.jpg?v=1520378855',
+    image3 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/scorpio-bs-black.jpg?v=1520379649'
+    },
+    
+    {
+    name= 'Florette Appliqué Bodysuit',
+    size= 'XS/S M/L',
+    description='Introducing the infinitely enchanting the Florette Appliqué Bodysuit. Designed with a soft tulle and lace blend and illusion tulle paneling to contour the body and topped off with a standout floral appliqué accent to infuse a hint of dark romance into this gorgeous one-piece.',
+    color= 'noir and teal',
+    material= 'mesh, nylon, spandex',
+    price= '$148.98',
+    category= 'bodysuit',
+    image1 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/Florette_Bodysuit.jpg?v=1520379729',
+    image2= 'https://cdn.shopify.com/s/files/1/0271/4967/products/SKBOD1081A-FA17_TEAL_FRONT1.jpg?v=1520379729',
+    image3 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/Florette_Bodysuit.jpg?v=1520379729'
+    },
+    
+    {
+    name= 'Poppy Corset Bodysuit',
+    size= 'XS/S M/L',
+    description= 'All laced up. The Poppy Corset Bodysuit was designed on a soft cotton jesery complete with a flattering silhouette, a straight neckline, wide set straps and sultry lacing details. Pair with high-waisted jeans for a slimming look.',
+    color= 'blanc',
+    material= 'cotton, spandex, polyester',
+    price= '$171.00',
+    category= 'bodysuit',
+    image1 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/poppybodysuit-3.jpg?v=1520378988',
+    image2= 'https://cdn.shopify.com/s/files/1/0271/4967/products/poppybodysuit.jpg?v=1520378988',
+    image3 = 'https://cdn.shopify.com/s/files/1/0271/4967/products/poppybodysuit-0.jpg?v=1520378988',
+    },
 ]
