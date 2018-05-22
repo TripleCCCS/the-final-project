@@ -6,6 +6,7 @@ const Product = require('../models/product')
 router.get('/products', (req, res, next) => {
   Product.find()
   .then((list)=>{
+    console.log("products in the backemd: ", list)
     res.json(list);
   })
   .catch((err)=>{
