@@ -134,4 +134,15 @@ authRoutes.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
+
+authRoutes.get('/loggedin', (req, res, next) => {
+  console.log("user in backend: ", req.user)
+  if (req.isAuthenticated()) {
+    res.json(req.user);
+    return;
+  }
+
+  res.json({ message: 'Unauthorized' });
+});
+
 module.exports = authRoutes;
