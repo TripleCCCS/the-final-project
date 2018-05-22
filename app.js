@@ -16,6 +16,7 @@ const LocalStrategy   = require("passport-local").Strategy;
 const User            = require('./models/user');
 const flash           = require("connect-flash");
 const GoogleStrategy  = require("passport-google-oauth").OAuth2Strategy;
+const cors            = require('cors')  
 const app = express();
 
 
@@ -45,6 +46,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(cors({
+  credentials: true,
+  origin: ['http://localhost:4200']
+}))
 
 // Express View engine setup
 

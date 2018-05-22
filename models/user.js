@@ -15,10 +15,6 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  // passwordConf: {
-  //   type: String,
-  //   required: true,
-  // },
   googleID: String,
   address: String,
   city: String,
