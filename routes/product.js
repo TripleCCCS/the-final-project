@@ -6,7 +6,7 @@ const Product = require('../models/product')
 router.get('/products', (req, res, next) => {
   Product.find()
   .then((list)=>{
-    console.log("products in the backemd: ", list)
+    console.log("products in the backend: ", list)
     res.json(list);
   })
   .catch((err)=>{
@@ -15,7 +15,7 @@ router.get('/products', (req, res, next) => {
 });
 
 
-//get details about a sepcific task
+//get details about a sepcific product
 router.get('/products/:productID', (req, res, next) => {
   Product.findById(req.params.productID)
   .then((theProduct)=>{
@@ -40,6 +40,7 @@ router.post('/product', (req, res, next)=>{
       price: req.body.price
 
     }
+
   // Task.create(req.body) would work too
     Product.create(newProduct)
     .then((productJustCreated)=>{

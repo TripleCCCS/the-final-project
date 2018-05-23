@@ -112,16 +112,16 @@ authRoutes.post("/logout", (req, res) => {
   res.status(200).json({ message: 'Success' });
 });
  
-authRoutes.get('/:ID', (req, res, next) => {
-  console.log(req.params.ID)
-  Product.findById(req.params.ID)
-  .then((theProduct) => {
-    res.json(theProduct);
-  })
-  .catch((err)=>{
-    res.json(err)
-  })
-});
+// authRoutes.get('/:id', (req, res, next) => {
+//   console.log(req.params.id)
+//   Product.findById(req.params.id)
+//   .then((theProduct) => {
+//     res.json(theProduct);
+//   })
+//   .catch((err)=>{
+//     res.json(err)
+//   })
+// });
 
 
 // end homepage get
