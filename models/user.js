@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema   = mongoose.Schema;
+const Product = require('./product')
 
 const userSchema = new Schema({
   name: String,
@@ -20,7 +21,7 @@ const userSchema = new Schema({
   city: String,
   state: String,
   zip: String,
-  cart_id: [],
+  cart_id: [ {type: Schema.Types.ObjectId, ref: "Product"} ],
   credit: String
 
 }, {
