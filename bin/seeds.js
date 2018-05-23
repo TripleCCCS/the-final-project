@@ -356,6 +356,136 @@ image3: 'https://images.freepeople.com/is/image/FreePeople/46062154_047_c?$a15-p
     image2: 'https://cdn.shopify.com/s/files/1/0271/4967/products/poppybodysuit.jpg?v:1520378988',
     image3 : 'https://cdn.shopify.com/s/files/1/0271/4967/products/poppybodysuit-0.jpg?v=1520378988',
     },
+{
+  name: 'Eva Lace Ruffle Bodysuit',
+  size: 'XS/S M/L',
+  description:'Turn heads in the Eva Lace Bodysuit. With a sultry keyhole and soft silky ruffles undulating down the stretch floral lace and power mesh base, this statement bodysuit puts a modern twist on a Victorian-inspired look.',
+  color: 'noir',
+  material: 'mesh, nylon, spandex',
+  price: '$163.98',
+  category: 'bodysuit',
+  image1: 'https://cdn.shopify.com/s/files/1/0271/4967/products/SKBOD1086-FA17_BLACK_FRONT1.jpg?v=1520385604',
+  image2: 'https://cdn.shopify.com/s/files/1/0271/4967/products/Eva_Bodysuit.jpg?v=1520385604',
+  image3: 'https://cdn.shopify.com/s/files/1/0271/4967/products/SKBOD1086-FA17_BLACK_BACK1.jpg?v=1520385604',
+  },
+  
+  {
+  name: 'Clementine Dot Bodysuit',
+  size: 'XS/S M/L',
+  description:'Take your bodysuits to a new level in the Clementine Dot Bodysuit. Featuring extra minimal coverage and sheer polka dot mesh, this figure-flattering piece is complete with decorative straps and a lined gusset. Pair under your favorite denims!',
+  color:  'blanc',
+  material: 'cotton, spandex, nylon, mesh',
+  price: '$153.00',
+  category: 'bodysuit',
+  image1: 'https://cdn.shopify.com/s/files/1/0271/4967/products/clementinebodysuit-white-3.jpg?v=1524524537',
+  image2: 'https://cdn.shopify.com/s/files/1/0271/4967/products/clementinebodysuit-white-6.jpg?v=1525717218',
+  image3: 'https://cdn.shopify.com/s/files/1/0271/4967/products/clementinebodysuit-white-1.jpg?v=1524524537'
+  },
+  
+  {
+  name:'Kira Lace Bodysuit',
+  size: 'XS/S M/L',
+  description:'The Kira Lace Bodysuit features a romantic blend of floral embroidery and intricate vintage-inspired details. Accented with contrast silky trims and ruffles, this mesh bodysuit accentuates your figure with its chic secretary neckline and makes layering easy with its minimal thong back.',
+  color: 'rose',
+  material: 'floral mesh',
+  price: '$174.98',
+  category: 'bodysuit',
+  image1: 'https://cdn.shopify.com/s/files/1/0271/4967/products/kirabodysuit-vintagerose.jpg?v=1520297621',
+  image2: 'https://cdn.shopify.com/s/files/1/0271/4967/products/SHOT_16_087.jpg?v=1520297621',
+  image3: 'https://cdn.shopify.com/s/files/1/0271/4967/products/FLL_Skivvies_Holiday17_MAUS.16545.jpg?v=1520297621'
+  },
+  
+  {
+  name: 'Eva Lace Ruffle Bodysuit',
+  size: 'XS/S M/L',
+  description:'Turn heads in the Eva Lace Bodysuit. With a sultry keyhole and soft silky ruffles undulating down the stretch floral lace and power mesh base, this statement bodysuit puts a modern twist on a Victorian-inspired look.',
+  color: 'blanc',
+  material: 'lace, mesh, nylon',
+  price: '$163.98',
+  category: 'bodysuit',
+  image1: 'https://cdn.shopify.com/s/files/1/0271/4967/products/SKBOD1086-FA17_IVORY_FRONT1.jpg?v=1520385579',
+  image2: 'https://cdn.shopify.com/s/files/1/0271/4967/products/SKBOD1086-FA17_IVORY_FRONT2.jpg?v=1520385579',
+  image3: 'https://cdn.shopify.com/s/files/1/0271/4967/products/Eva_Lace_Bodysuit_Ivory.jpg?v=1520385579',
+  },
+  
+  
+  {
+  name: 'Golden Garden Bodysuit',
+  size: 'XS/S M/L',
+  description:'Sheer mesh underwire bodysuit featuring shimmering gold bee embroidery.',
+  color: 'nude',
+  material: 'velvet, mesh',
+  price: '$238.00',
+  category: 'bodysuit',
+  image1: 'https://images.freepeople.com/is/image/FreePeople/42794321_070_a?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image2: 'https://images.freepeople.com/is/image/FreePeople/42794321_070_c?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image3: 'https://images.freepeople.com/is/image/FreePeople/42794321_070_d?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  },
+  
+  {
+  name: 'Embroidered Floral Bodysuit',
+  size: 'XS/S M/L',
+  description: 'Sheer mesh bodysuit featuring allover colorful floral embroidery detailing.',
+  color: 'rose floral',
+  material: 'nylon, mesh',
+  price: '$98.00',
+  category: 'bodysuit',
+  image1: 'https://images.freepeople.com/is/image/FreePeople/42823849_065_a?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image2:'https://images.freepeople.com/is/image/FreePeople/42823849_065_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain' ,
+  image3:'https://images.freepeople.com/is/image/FreePeople/42823849_065_c?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain' ,
+  },
+  
+  {
+  name: 'Night Out Bodysuit',
+  size: 'XS/S M/L',
+  description:'Silky bodysuit featuring a wrap design and a contrast lace bottom.',
+  color: 'black, rose',
+  material: 'silk, cotton',
+  price: '$58.00',
+  category: 'bodysuit',
+  image1: 'https://images.freepeople.com/is/image/FreePeople/46089751_001_a?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image2: 'https://images.freepeople.com/is/image/FreePeople/46089751_001_c?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image3: 'https://images.freepeople.com/is/image/FreePeople/46089751_001_d?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  },
+  
+  {
+  name: 'Temecula Bodysuit',
+  size: 'XS/S M/L',
+  description: 'Delicate sheer mesh bodysuit with tonal floral embroidery detailing.',
+  color: 'noir, blanc',
+  material: 'mesh',
+  price: '$138.00',
+  category: 'bodysuit',
+  image1: 'https://images.freepeople.com/is/image/FreePeople/42553594_001_a?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image2: 'https://images.freepeople.com/is/image/FreePeople/42553594_001_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image3: 'https://images.freepeople.com/is/image/FreePeople/42553594_001_c?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  },
+  
+  {
+  name: 'Mimi Bodysuit',
+  size: 'XS/S M/L',
+  description: 'American made in our Signature Seamless fabric, this off-the-shoulder long sleeve bodysuit features a front keyhole cutout',
+  color: 'red, blanc, white',
+  material: 'spandex, cotton',
+  price: '$58.00',
+  category: 'bodysuit',
+  image1: 'https://images.freepeople.com/is/image/FreePeople/45581329_010_a?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image2: 'https://images.freepeople.com/is/image/FreePeople/45581329_010_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image3: 'https://images.freepeople.com/is/image/FreePeople/45581329_010_d?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  },
+  
+  {
+  name: 'Goddess Bodysuit',
+  size: 'XS/S M/L',
+  description:'In a soft and stretchy fabrication, this ankle-length bodysuit features a comfortable, second skin fit for free and easy movements.',
+  color:  'noir',
+  material: 'cotton, spandex',
+  price: '$128.00',
+  category: 'bodysuit',
+  image1: 'https://images.freepeople.com/is/image/FreePeople/45764370_001_a?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image2: 'https://images.freepeople.com/is/image/FreePeople/45764370_001_b?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  image3: 'https://images.freepeople.com/is/image/FreePeople/45764370_001_d?$a15-pdp-detail-shot$&hei=900&qlt=80&fit=constrain',
+  }
 ]
 
 Product.create(products, (err) =>{

@@ -112,7 +112,16 @@ authRoutes.post("/logout", (req, res) => {
   res.status(200).json({ message: 'Success' });
 });
  
-
+// authRoutes.get('/:id', (req, res, next) => {
+//   console.log(req.params.id)
+//   Product.findById(req.params.id)
+//   .then((theProduct) => {
+//     res.json(theProduct);
+//   })
+//   .catch((err)=>{
+//     res.json(err)
+//   })
+// });
 
 
 // end homepage get
@@ -125,7 +134,7 @@ authRoutes.get("/auth/google", passport.authenticate("google", {
 
 authRoutes.get("/auth/google/callback", passport.authenticate("google", {
   failureRedirect: "/",
-  successRedirect: "/user-profile"
+  successRedirect: "/"
 }));
 
 
