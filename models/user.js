@@ -24,6 +24,8 @@ const userSchema = new Schema({
   cart_id: [ {type: Schema.Types.ObjectId, ref: "Product"} ],
   creditCards: []
 }, {
+  usePushEach: true
+  },{
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
 });
 

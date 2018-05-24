@@ -155,25 +155,58 @@ authRoutes.get('/loggedin', (req, res, next) => {
 });
 
 authRoutes.post('/creditinfo', (req, res, next) => {
-  const theNewCard = {
-    name: req.body.name,
-    cardnumber: req.body.cardnumber,
-    cardexp: req.body.cardexp,
-    cvv: req.body.cvv,
-    mailing_address: req.body.mailing_address,
-    city: req.body.city,
-    state: req.body.state,
-    zip: req.body.zip
-  };
-  Credit.create(theNewCard)
-    .then((theNewCard)=>{
-      console.log("blahhhh: ", theNewCard);
-      res.json(theNewCard)
-    })
-    .catch((err)=>{
-      res.json(err)
+if(!req.user){
+  res.status(401).json({message: 'You have to be logged in in order to add credit card!'})
+}
+
+    const theNewCard = new Credit({
+      name: req.body.cardname,
+      cardnumber: req.body.cardnumber,
+      cardexp: req.body.cardexp,
+      cvv: req.body.cvv,
+      mailing_address: req.body.mailing_address,
+      city: req.body.city,
+      state: req.body.state,
+      zip: req.body.zip
+    });
+
+    theNewCard.save( err => {
+      if(err){
+        res.json(err);
+        return;
+      }
+    console.log("user before save: ", req.user);
+
+      req.user.creditCards.push(theNewCard._id);
+      req.user.save( err => {
+        console.log("user after save: ", req.user);
+
+        if(err){
+          res.json(err);
+          return;
+        }
+        res.json(req.user);
+      })
     })
 }) 
+
+
+authRoutes.get('/creditcards', (req, res, next) => {
+  var cardsArray = [];
+  User.findById(req.user._id)
+  .then(foundUser => {
+    foundUser.creditCards.forEach( oneCCNumber => {
+      Credit.findById(oneCCNumber)
+      .then(foundCard => {
+        cardsArray.push(foundCard);
+        console.log("cards array up: ", cardsArray)
+      })
+    })
+    setTimeout(function(){
+      res.json(cardsArray)
+    }, 1000)
+  })
+} )
 
 
 module.exports = authRoutes;
