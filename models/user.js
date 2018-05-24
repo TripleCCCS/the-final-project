@@ -22,8 +22,7 @@ const userSchema = new Schema({
   state: String,
   zip: String,
   cart_id: [ {type: Schema.Types.ObjectId, ref: "Product"} ],
-  credit: String
-
+  creditCards: []
 }, {
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
 });

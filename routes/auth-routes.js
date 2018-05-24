@@ -154,4 +154,26 @@ authRoutes.get('/loggedin', (req, res, next) => {
   res.json({ message: 'Unauthorized' });
 });
 
+authRoutes.post('/creditinfo', (req, res, next) => {
+  const theNewCard = {
+    name: req.body.name,
+    cardnumber: req.body.cardnumber,
+    cardexp: req.body.cardexp,
+    cvv: req.body.cvv,
+    mailing_address: req.body.mailing_address,
+    city: req.body.city,
+    state: req.body.state,
+    zip: req.body.zip
+  };
+  Credit.create(theNewCard)
+    .then((theNewCard)=>{
+      console.log("blahhhh: ", theNewCard);
+      res.json(theNewCard)
+    })
+    .catch((err)=>{
+      res.json(err)
+    })
+}) 
+
+
 module.exports = authRoutes;

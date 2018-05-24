@@ -2,11 +2,14 @@ const mongoose = require("mongoose");
 const Schema   = mongoose.Schema;
 
 const creditSchema = new Schema({
-  number: String,
+  name: String,
+  cardnumber: String,
+  cardexp: String,
   mailing_address: String,
-  expiration: String,
-  ccv: String,
-
+  cvv: String,
+  city: String,
+  state: String,
+  zip: String
 
 }, {
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
