@@ -21,7 +21,7 @@ const userSchema = new Schema({
   city: String,
   state: String,
   zip: String,
-  cart_id: [ {type: Schema.Types.ObjectId, ref: "Product"} ],
+  cart_id: [ ],
   creditCards: []
 }, {
   usePushEach: true
