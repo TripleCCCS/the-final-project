@@ -8,6 +8,7 @@ const bcryptSalt          = 10;
 const User                = require("../models/user");
 const Product             = require("../models/product");
 const Credit              = require("../models/credit");
+const Cart                = require('../models/cart');
 
 
 

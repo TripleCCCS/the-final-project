@@ -14,6 +14,8 @@ const bcrypt          = require("bcrypt");
 const passport        = require("passport");
 const LocalStrategy   = require("passport-local").Strategy;
 const User            = require('./models/user');
+// const Product         = require("../models/product");
+// const Cart            = require('../models/cart')
 const flash           = require("connect-flash");
 const GoogleStrategy  = require("passport-google-oauth").OAuth2Strategy;
 const cors            = require('cors')  
@@ -78,6 +80,9 @@ app.use('/', authRoutes)
 
 const productRoutes = require("./routes/product");
 app.use('/product', productRoutes)
+
+const cartRoutes = require('./routes/cart-routes');
+app.use('/', cartRoutes);
 
 
 module.exports = app;
