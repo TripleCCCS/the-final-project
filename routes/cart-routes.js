@@ -42,8 +42,8 @@ router.get('/user/:id/cart', (req, res, next) => {
       } )
     })
     setTimeout(function(){
-      // console.log("1 is: ", arrayOfProductIds.length )
-      // console.log("2 is: ", myCart.length)
+      // console.log("1 is: ", arrayOfProductIds.length );
+      // console.log("2 is: ", myCart.length);
       if(arrayOfProductIds.length === myCart.length){
         res.json(myCart)
       }
