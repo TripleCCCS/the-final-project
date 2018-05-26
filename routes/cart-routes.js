@@ -49,6 +49,28 @@ router.get('/user/:id/cart', (req, res, next) => {
       }
     },3000)
   } )
+
+  router.post('/user/delete/:id/cart', (req, res, next)=>{
+    User.findById(req.params.id)
+    .then( foundUser => {
+      var arrayOfProductIds = foundUser.cart_id;
+      // console.log("array is: ", arrayOfProductIds)
+      arrayOfProductIds.forEach(oneId => {
+        Product.findById(oneId)
+        .then( foundProduct => {
+          myCart.splice(foundProduct);
+        } )
+      })
+    })
+    setTimeout(function(){
+      // console.log("1 is: ", arrayOfProductIds.length )
+      // console.log("2 is: ", myCart.length)
+      if(arrayOfProductIds.length === myCart.length){
+        res.json(myCart)
+      }
+    },3000)
+    
+  })
 });
 
 
