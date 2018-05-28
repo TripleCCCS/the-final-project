@@ -6,19 +6,28 @@ const Product = require("../models/product");
 
 
 router.post('/cart', (req, res, next) => {
+  // console.log("BODY IS +++++++++++++++ ", req.body);
   var prodId = req.body.prodId;
   User.findById(req.user._id)
   .then( foundUser => {
     Product.findById(prodId)
     .then( foundProduct => {
-      foundUser.cart_id.push(foundProduct._id);
-      foundUser.save( err => {
+      // foundProduct.quantity = req.body.quantity;
+      foundProduct.save( err => {
         if(err){
           res.json(err);
           return;
         }
-        res.status(200).json(foundUser)
-      } )
+        foundUser.cart_id.push(foundProduct._id);
+        foundUser.save( err => {
+          if(err){
+            res.json(err);
+            return;
+          }
+          res.status(200).json(foundUser)
+        } )
+      })
+   
       // console.log("whattt: ", foundProduct)
     } )
     // console.log("whos user: ", foundUser)
