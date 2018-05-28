@@ -83,6 +83,6 @@ router.post('/cart/:prodId/delete', (req, res, next) => {
   })
 })
 
-
+// delete route for clauds
 
 module.exports = router;
