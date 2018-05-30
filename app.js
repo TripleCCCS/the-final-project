@@ -24,7 +24,8 @@ const app = express();
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/express-server-the-final-project', {useMongoClient: true})
+.connect(process.env.MONGODB_URI)
+  // .connect('mongodb://localhost/express-server-the-final-project', {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
@@ -84,5 +85,9 @@ app.use('/product', productRoutes)
 const cartRoutes = require('./routes/cart-routes');
 app.use('/', cartRoutes);
 
+app.use((req, res, next) => {
+  // If no routes match, send them the Angular HTML.
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 module.exports = app;
