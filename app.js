@@ -83,7 +83,7 @@ const productRoutes = require("./routes/product");
 app.use('/product', productRoutes)
 
 const cartRoutes = require('./routes/cart-routes');
-app.use('/', cartRoutes);
+app.use('/api', cartRoutes);
 
 app.use((req, res, next) => {
   // If no routes match, send them the Angular HTML.
