@@ -5,7 +5,7 @@ const User    = require('../models/user')
 const Product = require("../models/product");
 
 
-router.post('/api/cart', (req, res, next) => {
+router.post('/cart', (req, res, next) => {
   // console.log("BODY IS +++++++++++++++ ", req.body);
   var prodId = req.body.prodId;
   User.findById(req.user._id)
@@ -37,7 +37,7 @@ router.post('/api/cart', (req, res, next) => {
 
 
 
-router.get('/user/:id/api/cart', (req, res, next) => {
+router.get('/user/:id/cart', (req, res, next) => {
   // var userId = req.params.id;
   var myCart = [];
   User.findById(req.user.id)
@@ -60,7 +60,7 @@ router.get('/user/:id/api/cart', (req, res, next) => {
   } )
 });
 
-router.post('/api/cart/:prodId/delete', (req, res, next) => {
+router.post('/cart/:prodId/delete', (req, res, next) => {
   console.log("helloooooooo ======= ", req.body)
   var prodid = req.params.prodId;
 
